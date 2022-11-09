@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.15)
 
 #! CHANGE YOUR PROJECT NAME
 #  It is used as your project's main executable name. 
-set(PROJECT_NAME template)
+set(PROJECT_NAME mycat)
 project(${PROJECT_NAME} C CXX) # project(${PROJECT_NAME} C CXX ASM)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 ##########################################################
 # User configurable options of the template
 ##########################################################
-# Note: symbols like WARNINGS_AS_ERRORS in configuration are intentionally variables
+# Note: symbols like WARNINGS_AS_ERRORS in con figuration are intentionally variables
 # and not CMake options --using options creates too much problem for students.
 
 #! It is a good practice to set "WARNINGS_AS_ERRORS" ON,
@@ -59,10 +59,10 @@ add_executable(${PROJECT_NAME} main.cpp
 				options_parser/options_parser.cpp options_parser/options_parser.h)
 
 #! Put path to your project headers
-target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
-
-#! Add external packages
-# options_parser requires boost::program_options library
+#target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
+#
+##! Add external packages
+## options_parser requires boost::program_options library
 find_package(Boost 1.71.0 COMPONENTS program_options system REQUIRED)
 target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIR})
 target_link_libraries(${PROJECT_NAME} Boost::program_options Boost::system)
