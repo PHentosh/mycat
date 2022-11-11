@@ -3,6 +3,7 @@
 
 #include <filesystem>
 #include <iostream>
+#include <unistd.h>
 #include "options_parser.h"
 
 namespace po = boost::program_options;
@@ -41,6 +42,10 @@ void command_line_options_t::parse(int ac, char **av) {
 
 void assert_file_exist(const std::string &f_name) {
     if (!std::filesystem::exists(f_name)) {
-        throw std::invalid_argument("File " + f_name + " not found!");
+        std::string file_error;
+        file_error = "File not found or not exist: " + f_name + "\n";
+
+        write(2, file_error.c_str(), file_error.length());
+        _exit (-1);
     }
 }
