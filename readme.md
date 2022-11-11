@@ -1,44 +1,50 @@
-<mark>Template for your README. Remove all unused parts and instructions</mark>
-
-# Lab work <mark>NUMBER</mark>: <mark>SHORT TOPIC</mark>
-Authors (team): <mark>AUTHORS WITH GITHUB LINKS</mark><br>
+# Lab work <mark></mark>: <mark>My cat</mark>
+Authors (team): <mark>Petro Hentosh (https://github.com/PHentosh)</mark><br>
 Variant: <mark>VARIANT SHOULD BE HERE</mark>
 ## Prerequisites
 
-<mark>LIST LIBRARIES/TOOLS/OTHER UTILITIES THAT NEED TO BE INSTALLED (E.G. GCC, OPENMP, CMAKE ETC)</mark>
+<mark>LIST LIBRARIES/TOOLS/OTHER UTILITIES THAT NEED TO BE INSTALLED (E.G. GCC, OPENMP, CMAKE ETC)
+GCC
+CMAKE
+BOOST
+</mark>
 
 ### Compilation
 
-<mark>HOW TO COMPILE YOUR PROGRAM? (RECOMMENDED: ./comile.sh)</mark>
+<mark>
+$mkdir cmakeBuild
+$cd cmakeBuild
+$cmake ./..
+$make
+</mark>
 
 ### Installation
 
-<mark>DESCRIBE THE INSTALLATION PROCESS (USE ./dependencies FOLDER)</mark>
+<mark>
+look in the dependencies folder and check if you have all libs installed
+</mark>
 
-<mark>Note: For Python scripts, You must add `requirenments.txt` 
-file and add your env to the `.gitignore` file!</mark>
 
 ### Usage
 
-<mark>PROVIDE AN EXAMPLE OF HOW TO RUN YOUR PROGRAM (IT CAN BE A_flag COMMAND LINE WITH INPUT AND EXPECTED OUTPUT)</mark>
+<mark>
+/cmakeBuild$/.mycat ../data/test.txt
+Here is some test text
+New line check
+</mark>
 
-<mark>Note: if your project needs or generates any data, media and so on -- put them
-into the data folder</mark> 
+<mark>files to test project are in the data folder</mark> 
 
 ### Important!
 
-<mark>WHAT ELSE SHOULD WE KNOW ABOUT YOUR WORK? (E.G. KNOWN ISSUES, BUGS, SPECIAL BEHAVIOR ETC)</mark>
+<mark>
+If option -A is given, program will print hex values for all invisible characters except whitespaces
+</mark>
 
 ### Results
+![image](https://user-images.githubusercontent.com/71725222/201330281-5c3049cf-8cfa-48cf-9f1f-9917289291fb.png)
+
 
 <mark>DESCRIBE THE RESULTS OF THE WORK YOU DID. WHAT DID YOU LEARN OR FIND INTERESTING?</mark>
 
-# Additional tasks
-<mark>IF APPLICABLE, LIST ALL THE EXTRA FEATURES YOU ADDED. PROVIDE DETAILS<mark>
-
-# ATTENTION!
-  
-Additional tasks not listed in the previous paragraph would not be graded.
-
-Be sure to provide a complete list of authors.
 
